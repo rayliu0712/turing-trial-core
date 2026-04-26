@@ -20,11 +20,12 @@ export function revealVotes(votes: readonly PlayerId[]): VotesRevealEvent {
   for (const id of votes) {
     result.set(id, (result.get(id) ?? 0) + 1);
   }
+  const isDraw = votes.length === result.size;
 
   // 票數降序排序，當同票時以 playerId 升序排序
   const sorted = [...result].toSorted((a, b) => {
     const votes = b[1] - a[1];
-    if (votes != 0) return votes;
+    if (votes !== 0) return votes;
     return parseInt(a[0].slice(3)) - parseInt(b[0].slice(3));
   });
 
@@ -41,6 +42,7 @@ export function revealVotes(votes: readonly PlayerId[]): VotesRevealEvent {
     type: 'reveal-votes',
     result,
     mostVoted,
+    isDraw,
   };
 }
 

@@ -40,6 +40,7 @@ export interface VotesRevealEvent {
   phase?: VotePhase;
   result: Map<PlayerId, number>;
   mostVoted: PlayerId[];
+  isDraw: boolean;
 }
 
 export interface ExecutionEvent {
