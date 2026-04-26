@@ -14,7 +14,7 @@
   ],
   "scripts": {
     "build": "tsc",
-    "prepublishOnly": "build"
+    "prepublishOnly": "pnpm build"
   },
   "peerDependencies": {
     "ai": "^6.0.168"
