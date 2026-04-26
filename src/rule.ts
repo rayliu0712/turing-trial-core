@@ -1,4 +1,4 @@
-import type { PlayerId } from './types';
+import type { PlayerId } from './types.js';
 
 export function getRule(id: PlayerId): string {
   return `西元2050年，AI崛起，人類和AI的戰爭拉開了帷幕。

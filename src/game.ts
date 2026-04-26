@@ -6,9 +6,9 @@ import type {
   PlayerId,
   Round,
   VotePhase,
-} from './types';
-import { getRule } from './rule';
-import { pushAiContent, pushUserContent } from './messages';
+} from './types.js';
+import { getRule } from './rule.js';
+import { pushAiContent, pushUserContent } from './messages.js';
 
 export class Game {
   private readonly playerMap: Map<PlayerId, Player>;

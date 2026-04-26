@@ -1,4 +1,4 @@
-import type { ExecutionEvent, PlayerId, VotesRevealEvent } from './types';
+import type { ExecutionEvent, PlayerId, VotesRevealEvent } from './types.js';
 
 export function parseVote(text: string): PlayerId | null {
   const tagMatch = text.match(/<votes?>\s*(id-\d+)\s*<\/votes?>/);

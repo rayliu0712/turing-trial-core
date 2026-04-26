@@ -1,5 +1,5 @@
-export { Game } from './game';
-export { parseVote, revealVotes, execute } from './vote';
+export { Game } from './game.js';
+export { parseVote, revealVotes, execute } from './vote.js';
 export type {
   PlayerId,
   VotePhase,
@@ -9,4 +9,4 @@ export type {
   StaticPlayer,
   Player,
   Round,
-} from './types';
+} from './types.js';
